@@ -45,32 +45,46 @@ def calculator():
     for dot in range(3):
         print(".\n")
         time.sleep(1)
-    print("Here's for the answer:")
     
 	# if response is '+', add two values
     if math_operator == '+':
+        print("Here's for the answer:")
         resultant_value = first_value + second_value
         time.sleep(1)
         sum = f"\n{first_value} + {second_value} = {resultant_value}"
         print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ntgreek"))
 
 	# if response '-', subtract the first inputted number to the second inputted number
-    if math_operator == '-':
+    elif math_operator == '-':
+        print("Here's for the answer:")
         resultant_value = first_value - second_value
         time.sleep(1)
-        sum = f"\n{first_value} - {second_value} = {resultant_value}"
-        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ntgreek")) 
+        difference = f"\n{first_value} - {second_value} = {resultant_value}"
+        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(difference.center(65), font= "ntgreek")) 
 
 	# if response is 'x', multiply the first inputted number to the second inputted number
-    if math_operator == 'x':
+    elif math_operator == 'x':
+        print("Here's for the answer:")
         resultant_value = first_value * second_value
         time.sleep(1)
-        sum = f"\n{first_value} x {second_value} = {resultant_value}"
-        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ogre"))
+        product = f"\n{first_value} x {second_value} = {resultant_value}"
+        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(product.center(65), font= "ogre"))
 	# if response is '/' 
-        # try dividing the first inputted number to the second inputted number
-        # use except function to capture any Zero Division Error
-        # break the loop
+    elif math_operator == '/':
+        # inside while loop
+        while True:
+            # try dividing the first inputted number to the second inputted number
+            try:
+                resultant_value = first_value / second_value
+                quotient = f"\n{first_value} / {second_value} = {resultant_value}"
+                print("Here's for the answer:")
+                print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(quotient.center(65), font= "ogre"))
+            # use except function to capture any Zero Division Error
+            except ZeroDivisionError:
+                print("\nInvalid Input. You're trying to divide a particular number by 0\n")
+                print("Please try again.")
+            # break the loop
+            break
 	# else, print Invalid Input
 
 # To loop the program, create a while loop
