@@ -32,15 +32,25 @@ def calculator():
             print("\nInvalid Input, input numerical characters only.\n")
             print("Please try again.\n")
             time.sleep(1)
-	# ask user for what operator to use
+	
+    # ask user for what operator to use
     print("\nInput one of the following values to determine what mathematical operator will be used for calculation.\n")
     time.sleep(1)
     print("Use '+' to indicate addition\nUse '-' to indicate subtraction\
           \nUse 'x' to indicate multiplication\nUse'/' to indicate division")
-    time.sleep(1)
     math_operator = input("\nInput what operator to use: ")
     math_operator = math_operator.lower()
+    for dot in range(3):
+        print(".\n")
+        time.sleep(1)
+    print("Here's for the answer:")
+    
 	# if response is '+', add two values
+    if math_operator == '+':
+        resultant_value = first_value + second_value
+        time.sleep(1)
+        sum = f"\n{first_value} + {second_value} = {resultant_value}"
+        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ntgreek"))
 	# if response '-', subtract the first inputted number to the second inputted number
 	# if response is 'x', multiply the first inputted number to the second inputted number
 	# if response is '/' 
