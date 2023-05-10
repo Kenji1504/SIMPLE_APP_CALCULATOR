@@ -16,7 +16,7 @@ time.sleep(1)
 print("\033[1m" + "\nWelcome to SIMPLE CALCULATOR.") 
 time.sleep(1)
 print("\nPlease input the following requirements to calculate for the resulting value.\n")
-
+time.sleep(1)
 # create a calculator function
 def calculator():
     # create a while loop
@@ -24,14 +24,22 @@ def calculator():
 	    # try asking the user to input two numerical values.
         try:
             first_value = float(input("Input the first value: "))
-            second_value = float(input("Input the second value: "))
+            second_value = float(input("\nInput the second value: "))
             # break the loop if inputs are valid
             break
 	    # use except function to capture any Value Error
         except ValueError:
-            print("Invalid Input, input numerical characters only.\n")
+            print("\nInvalid Input, input numerical characters only.\n")
             print("Please try again.\n")
+            time.sleep(1)
 	# ask user for what operator to use
+    print("\nInput one of the following values to determine what mathematical operator will be used for calculation.\n")
+    time.sleep(1)
+    print("Use '+' to indicate addition\nUse '-' to indicate subtraction\
+          \nUse 'x' to indicate multiplication\nUse'/' to indicate division")
+    time.sleep(1)
+    math_operator = input("\nInput what operator to use: ")
+    math_operator = math_operator.lower()
 	# if response is '+', add two values
 	# if response '-', subtract the first inputted number to the second inputted number
 	# if response is 'x', multiply the first inputted number to the second inputted number
