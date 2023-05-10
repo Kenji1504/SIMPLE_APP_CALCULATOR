@@ -4,6 +4,19 @@
 # by the user using the basic mathematical operations.
 # Appropriate exception capturing codes will be also implemented in this program.
 
+import time
+import pyfiglet
+
+# create program title
+PROGRAM_TITLE = "S I M P L E   C A L C U L A T O R"
+print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(PROGRAM_TITLE.center(70), font= "short"))
+#print short introduction 
+# write for an introduction
+time.sleep(1)
+print("\033[1m" + "\nWelcome to SIMPLE CALCULATOR.") 
+time.sleep(1)
+print("\nPlease input the following requirements to calculate for the resulting value.\n")
+
 # create a calculator function
     # create a while loop
 	    # try asking the user to input two numerical values.
