@@ -38,8 +38,10 @@ def calculator():
     time.sleep(1)
     print("Use '+' to indicate addition\nUse '-' to indicate subtraction\
           \nUse 'x' to indicate multiplication\nUse'/' to indicate division")
+    time.sleep(1)
     math_operator = input("\nInput what operator to use: ")
     math_operator = math_operator.lower()
+    time.sleep(1)
     for dot in range(3):
         print(".\n")
         time.sleep(1)
@@ -60,6 +62,11 @@ def calculator():
         print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ntgreek")) 
 
 	# if response is 'x', multiply the first inputted number to the second inputted number
+    if math_operator == 'x':
+        resultant_value = first_value * second_value
+        time.sleep(1)
+        sum = f"\n{first_value} x {second_value} = {resultant_value}"
+        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ogre"))
 	# if response is '/' 
         # try dividing the first inputted number to the second inputted number
         # use except function to capture any Zero Division Error
