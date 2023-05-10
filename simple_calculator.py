@@ -51,7 +51,14 @@ def calculator():
         time.sleep(1)
         sum = f"\n{first_value} + {second_value} = {resultant_value}"
         print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ntgreek"))
+
 	# if response '-', subtract the first inputted number to the second inputted number
+    if math_operator == '-':
+        resultant_value = first_value - second_value
+        time.sleep(1)
+        sum = f"\n{first_value} - {second_value} = {resultant_value}"
+        print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(sum.center(65), font= "ntgreek")) 
+
 	# if response is 'x', multiply the first inputted number to the second inputted number
 	# if response is '/' 
         # try dividing the first inputted number to the second inputted number
