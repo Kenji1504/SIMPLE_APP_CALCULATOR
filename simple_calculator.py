@@ -15,7 +15,7 @@ print("\033[1m" + "\033[95m" + pyfiglet.figlet_format(PROGRAM_TITLE.center(70), 
 time.sleep(1)
 print("\033[1m" + "\nWelcome to SIMPLE CALCULATOR.") 
 time.sleep(1)
-print("\nPlease input the following requirements to calculate for the resulting value.\n")
+print("\nPlease input the following requirements to calculate for the resulting value.")
 
 # create a calculator function
 def calculator():
@@ -24,7 +24,7 @@ def calculator():
 	    # try asking the user to input two numerical values.
         try:
             time.sleep(1)
-            first_value = float(input("Input the first value: "))
+            first_value = float(input("\nInput the first value: "))
             time.sleep(1)
             second_value = float(input("\nInput the second value: "))
             # break the loop if inputs are valid
@@ -110,12 +110,15 @@ while True:
         repeat_program = repeat_program.lower()
         # if response is 'yes', continue
         if repeat_program == "y":
-            continue
+            break
         # if response in 'no', break
         elif repeat_program == "n":
+            # end program
+            time.sleep(1)
+            END_PROGRAM = "END"
+            time.sleep(1)
+            print ("\n" + "\033[1m" + END_PROGRAM.center(90, "-"))
             exit()
         else:
             # print 'Invalid Input'
             print("\n\033[31m" + "INVALID INPUT, please try again.")
-
-# end program
