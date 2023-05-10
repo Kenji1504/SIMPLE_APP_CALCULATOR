@@ -18,10 +18,19 @@ time.sleep(1)
 print("\nPlease input the following requirements to calculate for the resulting value.\n")
 
 # create a calculator function
+def calculator():
     # create a while loop
+    while True:
 	    # try asking the user to input two numerical values.
-            # break the loop
+        try:
+            first_value = float(input("Input the first value: "))
+            second_value = float(input("Input the second value: "))
+            # break the loop if inputs are valid
+            break
 	    # use except function to capture any Value Error
+        except ValueError:
+            print("Invalid Input, input numerical characters only.\n")
+            print("Please try again.\n")
 	# ask user for what operator to use
 	# if response is '+', add two values
 	# if response '-', subtract the first inputted number to the second inputted number
@@ -41,3 +50,5 @@ print("\nPlease input the following requirements to calculate for the resulting 
 			# print 'Invalid Input'
 			# ask user to try again	
 # end program
+
+calculator()
